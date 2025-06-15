@@ -7,6 +7,7 @@ using namespace std;
 
 const char HIDDEN_SYMBOL = '#';
 const int MAX_PAIRS = 50;
+extern int flipCount;
 
 void playMatchSound();
 void playNoMatchSound();
