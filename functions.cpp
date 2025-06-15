@@ -102,6 +102,7 @@ void getCardCoords(int& row, int& col,
 
 // Основная логика игры
 void playGame(int pairs, int playerCount) {
+    flipCount = 0;
     vector<vector<char>> board = createBoard(pairs);
     int rows = board.size();
     int cols = board[0].size();
