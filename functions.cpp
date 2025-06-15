@@ -1,5 +1,6 @@
 #include "functions.h"
 #include <windows.h>
+int flipCount = 0;
 // Звуки
 void playMatchSound() {
     Beep(800, 200);
@@ -125,7 +126,7 @@ void playGame(int pairs, int playerCount) {
 
         revealed[r1][c1] = true;
         revealed[r2][c2] = true;
-
+        flipCount += 2;
         system("cls");
         cout << "Ход игрока " << currentPlayer + 1 << endl;
         printBoard(board, revealed);
@@ -159,4 +160,5 @@ void playGame(int pairs, int playerCount) {
         cout << "Игрок " << i + 1 << ": " << scores[i] << " пар(а/ы)" << endl;
     }
     cout << "\nВремя игры: " << static_cast<int>(duration) << " секунд" << endl;
+    cout << "Число переворотов карт: " << flipCount << "\n";
 }
